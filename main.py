@@ -1,3 +1,5 @@
+import sys
+
 def get_book_text(file_path):
     with open(file_path) as f:
         file_contents = f.read()
@@ -12,7 +14,8 @@ def main():
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
-    file_contents = get_book_text("books/frankenstein.txt")
+    ## line 18 updated to remove /frankenstein.txt as we are trying to remove hard coding
+    file_contents = get_book_text(sys.argv)
     count = get_num_words(file_contents)
     print(f"Found {count} total words")
     print("--------- Character Count -------")
