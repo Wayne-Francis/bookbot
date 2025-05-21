@@ -30,6 +30,6 @@ def main():
     for s in sort_char:
         char = s["char"]
         number = s["num"]
-        if char.isalpha() == True:
-            print(f"{char}: {number}")
+        #if char.isalpha() == True:
+        print(f"{char}: {number}")
 main()
