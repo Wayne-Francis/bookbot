@@ -12,3 +12,12 @@ def get_num_character(book_string):
         else:
             string_count[s] = 1
     return string_count   
+
+def dict_list(dict):
+    character = []
+    for c, count in dict.items():
+        character.append({"char": c, "num": count})
+    return character
+
+def sort_on(dict):
+    return dict["num"]
