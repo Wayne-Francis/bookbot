@@ -17,7 +17,7 @@ from stats import sort_on
 
 def main():
     print("============ BOOKBOT ============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print(f"Analyzing book found at {sys.argv[1]}...")
     print("----------- Word Count ----------")
     ## line 18 updated to remove /frankenstein.txt as we are trying to remove hard coding
     file_contents = get_book_text(sys.argv[1])
