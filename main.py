@@ -23,5 +23,5 @@ def main():
         char = s["char"]
         number = s["num"]
         if char.isalpha() == True:
-            print(f"'{char}:{number}'")
+            print(f"{char}: {number}")
 main()
