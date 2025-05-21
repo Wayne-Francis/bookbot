@@ -1,8 +1,12 @@
 import sys
 
-## line 4 updated to remove file_path as we are trying to remove hard coding - can return by adding file_path back in
-def get_book_text(sys.argv):
-    with open(sys.argv) as f:
+if len(sys.argv) != 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
+
+def get_book_text(file_path):
+    with open(file_path) as f:
         file_contents = f.read()
     return file_contents
 
@@ -16,7 +20,7 @@ def main():
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
     ## line 18 updated to remove /frankenstein.txt as we are trying to remove hard coding
-    file_contents = get_book_text(sys.argv)
+    file_contents = get_book_text(sys.argv[1])
     count = get_num_words(file_contents)
     print(f"Found {count} total words")
     print("--------- Character Count -------")
