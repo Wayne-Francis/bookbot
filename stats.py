@@ -7,10 +7,12 @@ def get_num_character(book_string):
     string_count = {}
     book_string = book_string.lower()
     for s in book_string:
-        if s in string_count:
-            string_count[s] += 1
-        else:
-            string_count[s] = 1
+        ### the isalpha added as I had extra 2 in moby dick - hopefully this corrects it
+        if s.isalpha(): 
+            if s in string_count:
+                string_count[s] += 1
+            else:
+                string_count[s] = 1
     return string_count   
 
 def dict_list(dict):
