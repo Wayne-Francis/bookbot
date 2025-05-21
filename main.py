@@ -3,4 +3,7 @@ def get_book_text(file_path):
         file_contents = f.read()
     return file_contents
 
-from stats import get_num_words
+def main():
+    from stats import get_num_words
+main()
+
